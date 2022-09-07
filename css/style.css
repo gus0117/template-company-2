@@ -30,19 +30,243 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 375px) {
+    .navbar li {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .half-side {
+        width: 100%;
+        display: flex;
+    }
+
+    .float-left{
+        margin-bottom: 20px;
+    }
+
+    .float-right {
+        margin-top: 20px;
+    }
+
+    .center {
+        margin: 100px auto;
+    }
+
+    .link {
+        font-size: 1.6rem;
+    }
+
+    .title {
+        font-size: 4.5rem;
+        
+    }
+
+    .description{
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-family: 'Poppins', sans-serif;
+        padding: 1rem 4rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .btn-outline-primary {
+        background-color: transparent;
+        color: rgb(72, 129, 235);
+        border-color: rgb(72, 129, 235);
+        border-style: solid;
+        border-width: 4px;
+        border-radius: 12px;
+        transition: all 0.2s linear;
+    }
+
+    .btn-outline-primary:hover {
+        color: white;
+        background:rgb(72, 129, 235);
+        border-color: white;
+        transition: all 0.2s linear;
+    }
     
+    .circle-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .half-circle {
+        background-color: cornflowerblue;
+        height: 60vh;
+        width: 100%;
+        border-radius: 50% 0 0 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar li {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .half-side {
+        width: 100%;
+        display: flex;
+    }
+
+    .float-left{
+        margin-bottom: 20px;
+    }
+
+    .float-right {
+        margin-top: 20px;
+    }
+
+    .center {
+        margin: 100px auto;
+    }
+
+    .title {
+        margin: 10px 0;
+        text-align: center;
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+    }
+
+    .link {
+        font-size: 1.6rem;
+    }
+
+    .title {
+        font-size: 5rem;
+    }
+
+    .description{
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-family: 'Poppins', sans-serif;
+        padding: 1rem 4rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .btn-outline-primary {
+        background-color: transparent;
+        color: rgb(72, 129, 235);
+        border-color: rgb(72, 129, 235);
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 12px;
+        transition: all 0.2s linear;
+    }
+
+    .btn-outline-primary:hover {
+        color: white;
+        background:rgb(72, 129, 235);
+        border-color: white;
+        transition: all 0.2s linear;
+    }
+
+    .half-circle {
+        background-color: cornflowerblue;
+        height: 80vh;
+        width: 100%;
+        border-radius: 50% 0 0 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .link {
+        font-size: 1rem;
+    }
+
+    .navbar li {
+        float: left;
+    }
+
+    .half-side {
+        width: 50%;
+        display: flex;
+    }
+    
+    .float-left {
+        height: 50%;
+        float: left;
+    }
+    
+    .float-right {
+        height: 50%;
+        float: right
+    }
+
+    .center {
+        margin: 25% auto;
+    }
+
+    .title {
+        margin: 10px auto;
+        margin-right: 20px;
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+    }
+
+    
+    .btn {
+        font-family: 'Poppins', sans-serif;
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .btn-outline-primary {
+        background-color: transparent;
+        color: rgb(72, 129, 235);
+        border-color: rgb(72, 129, 235);
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 12px;
+        transition: all 0.2s linear;
+    }
+
+    .btn-outline-primary:hover {
+        color: white;
+        background:rgb(72, 129, 235);
+        border-color: white;
+        transition: all 0.2s linear;
+    }
+
+    
+    .half-circle {
+        background-color: cornflowerblue;
+        height: 90vh;
+        width: 100%;
+        border-radius: 50% 0 0 50%;
+    }
+
+    .half-circle img {
+        width: 80%;
+        filter: drop-shadow(8px 8px 4px rgb(37, 71, 133));
+    }
+}
+
+.navbar-dark-bg {
+    background-color: #333;
 }
 
 header {
     font-family: 'Poppins', sans-serif;
 }
 
-#navbar {
-    background-color: #333;
-}
-
-#navbar ul {
+.navbar ul {
     list-style: none;
     margin: 0;
     padding: 10px 0;
@@ -53,9 +277,6 @@ header {
     top: 0;
 }
 
-#navbar li {
-    float: left;
-}
 
 .link {
     position: relative;
@@ -104,30 +325,6 @@ header {
     font-family: 'Lobster', cursive;
 }
 
-.half-side {
-    width: 50%;
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right
-}
-
-.half-circle {
-    background-color: cornflowerblue;
-    height: 90vh;
-    width: 100%;
-    border-radius: 50% 0 0 50%;
-}
-
-.half-circle img {
-    width: 80%;
-    filter: drop-shadow(8px 8px 4px rgb(37, 71, 133));
-}
-
 .text-shadow-primary {
     filter: drop-shadow(8px 8px 4px rgb(37, 71, 133));
 }
@@ -148,48 +345,11 @@ header {
     padding: auto;
 }
 
-.title {
-    margin: 10px 0;
-    margin-right: 20px;
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-}
+
 
 .description {
     font-family: 'Poppins', sans-serif;
     margin: 10px 0;
-}
-
-.center {
-    margin: 0 auto;
-    width: 70%;
-    height: 100%;
-    padding-top: 25%;
-}
-
-.btn {
-    font-family: 'Poppins', sans-serif;
-    padding: 0.7rem 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.btn-outline-primary {
-    background-color: transparent;
-    color: rgb(72, 129, 235);
-    border-color: rgb(72, 129, 235);
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 12px;
-    transition: all 0.2s linear;
-}
-
-.btn-outline-primary:hover {
-    color: white;
-    background:rgb(72, 129, 235);
-    border-color: white;
-    transition: all 0.2s linear;
 }
 
 /* ABOUT */
@@ -210,4 +370,4 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
