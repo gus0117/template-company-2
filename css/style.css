@@ -2,15 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-#practica-1 {
-    height: 100vh;
 }
 
 
@@ -29,8 +26,21 @@
     text-align: center;
 }
 
+/* EFECTOS */
+
+.tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+  }
+  
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 
 @media only screen and (min-width: 375px) {
+
     .navbar li {
         text-align: center;
         margin-top: 10px;
@@ -50,20 +60,31 @@
     }
 
     .center {
-        margin: 100px auto;
+        /* margin: 0 auto;
+        padding: 25% 0; */
+        display: grid;
+        place-items: center;
     }
 
     .link {
         font-size: 1.6rem;
     }
 
-    .title {
-        font-size: 4.5rem;
-        
+    .title-roboto {
+        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
     }
 
     .description{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
     }
 
     .btn {
@@ -72,6 +93,7 @@
         font-size: 1.5rem;
         font-weight: 500;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .btn-outline-primary {
@@ -91,7 +113,7 @@
         transition: all 0.2s linear;
     }
     
-    .circle-content {
+/*     .circle-content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -104,11 +126,11 @@
         height: 60vh;
         width: 100%;
         border-radius: 50% 0 0 50%;
-    }
+    } */
 }
 
 @media only screen and (min-width: 768px) {
-    .navbar li {
+/*     .navbar li {
         text-align: center;
         margin-top: 10px;
     }
@@ -124,13 +146,14 @@
 
     .float-right {
         margin-top: 20px;
-    }
+    } */
 
-    .center {
-        margin: 100px auto;
-    }
+   /*  .center {
+        margin: 0 auto;
+        padding: 25% 0;
+    } */
 
-    .title {
+/*     .title {
         margin: 10px 0;
         text-align: center;
         font-size: 3.5rem;
@@ -147,9 +170,9 @@
 
     .description{
         font-size: 1.5rem;
-    }
+    } */
 
-    .btn {
+/*     .btn {
         font-family: 'Poppins', sans-serif;
         padding: 1rem 4rem;
         font-size: 1.5rem;
@@ -172,14 +195,14 @@
         background:rgb(72, 129, 235);
         border-color: white;
         transition: all 0.2s linear;
-    }
+    } */
 
-    .half-circle {
+    /* .half-circle {
         background-color: cornflowerblue;
         height: 80vh;
         width: 100%;
         border-radius: 50% 0 0 50%;
-    }
+    } */
 }
 
 @media only screen and (min-width: 1024px) {
@@ -207,11 +230,12 @@
         float: right
     }
 
-    .center {
-        margin: 25% auto;
-    }
+/*     .center {
+        margin: 0 auto;
+        padding: 25% 0;
+    } */
 
-    .title {
+    /* .title {
         margin: 10px auto;
         margin-right: 20px;
         font-size: 3.5rem;
@@ -255,8 +279,65 @@
     .half-circle img {
         width: 80%;
         filter: drop-shadow(8px 8px 4px rgb(37, 71, 133));
-    }
+    } */
 }
+
+    /* MARGINS */
+
+    .mt-1 {
+        margin-top: .25rem;
+    }
+
+    .mt-2 {
+        margin-top: .5rem;
+    }
+
+    .mt-3 {
+        margin-top: .75rem;
+    }
+
+    .mt-4 {
+        margin-top: 1rem;
+    }
+
+    .mt-5 {
+        margin-top: 1.25rem;
+    }
+
+    .mt-6 {
+        margin-top: 1.5rem;
+    }
+
+    .my-6 {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    /* PADDINGS */
+
+    .p-1{
+        padding: .25rem;
+    }
+
+    .py-1{
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+    }
+
+    .py-2 {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    .py-3 {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+    }
+
+    .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 
 .navbar-dark-bg {
     background-color: #333;
@@ -320,9 +401,18 @@ header {
 
 /* HOME */
 
-#home {
-    height: 80vh;
-    font-family: 'Lobster', cursive;
+.vh-100 {
+    height: 100vh;
+}
+
+.vh-90 {
+    height: 90vh;
+}
+
+.home {
+    height: 100vh;
+    /* font-family: 'Lobster', cursive; */
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 .text-shadow-primary {
@@ -345,22 +435,14 @@ header {
     padding: auto;
 }
 
-
-
 .description {
     font-family: 'Poppins', sans-serif;
     margin: 10px 0;
 }
 
-/* ABOUT */
-
-#about {
-    height: 100vh;
-}
-
 .parallax {
     /* The image used */
-    background-image: url("../assets/paralax-bg.webp");
+    background-image: url("../assets/home-bg-darken.jpg");
   
     /* Set a specific height */
     min-height: 500px; 
@@ -370,4 +452,8 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bg-light {
+    background-color: antiquewhite;
 }
