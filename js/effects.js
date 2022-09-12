@@ -2,7 +2,6 @@ $(document).ready(function() {
  const tags = $(".tag");
     const homeTag = tags[0];
     $(homeTag).addClass("visible");
-    const flag = true;
 });
 
 

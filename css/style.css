@@ -105,9 +105,11 @@ transform: translate(0, 0);
     }
 
     .description{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .btn {
@@ -156,6 +158,8 @@ transform: translate(0, 0);
 
     .box-item {
         text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .box-item svg {
@@ -163,9 +167,11 @@ transform: translate(0, 0);
     }
 
     .box-item h2 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 300;
         font-family: 'Poppins', sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -392,11 +398,6 @@ header {
 
 .p-auto {
     padding: auto;
-}
-
-.description {
-    font-family: 'Poppins', sans-serif;
-    margin: 10px 0;
 }
 
 .parallax {
