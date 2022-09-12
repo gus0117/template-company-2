@@ -64,6 +64,12 @@ transform: translate(0, 0);
 
 @media only screen and (min-width: 375px) {
 
+    /* TEXT COLORS */
+
+    .text-warning {
+        color: rgb(255, 136, 0);
+    }
+
     .navbar li {
         text-align: center;
         margin-top: 10px;
@@ -108,8 +114,8 @@ transform: translate(0, 0);
         font-size: 1.2rem;
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .btn {
@@ -135,6 +141,23 @@ transform: translate(0, 0);
     .btn-outline-primary:hover {
         color: white;
         background:rgb(72, 129, 235);
+        border-color: white;
+        transition: all 0.2s linear;
+    }
+
+    .btn-outline-warning {
+        background-color: transparent;
+        color: rgb(255, 136, 0);
+        border-color: rgb(255, 136, 0);
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 6px;
+        transition: all 0.2s linear;
+    }
+
+    .btn-outline-warning:hover {
+        color: white;
+        background:rgb(255, 136, 0);
         border-color: white;
         transition: all 0.2s linear;
     }
@@ -173,6 +196,15 @@ transform: translate(0, 0);
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    .about {
+        margin-top: 200px;
+    }
+
+    .text-container {
+        padding-top: 300px;
+        max-width: 850;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -195,6 +227,10 @@ transform: translate(0, 0);
     .col-md-11 {width: 91.66%;}
     .col-md-12 {width: 100%;}
 
+    .text-container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
     
 }
 
@@ -403,6 +439,20 @@ header {
 .parallax {
     /* The image used */
     background-image: url("../assets/home-bg-darken.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-about {
+    /* The image used */
+    background-image: url("../assets/parallax-about.jpg");
   
     /* Set a specific height */
     min-height: 500px; 
