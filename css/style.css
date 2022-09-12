@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 .padre {
     height: 100vh;
@@ -32,12 +36,31 @@
     opacity: 0;
     transform: translate(0, 10vh);
     transition: all 1s;
-  }
+}
+
+.tag.visible {
+opacity: 1;
+transform: translate(0, 0);
+}
+
+/* Grid */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
   
-  .tag.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
 
 @media only screen and (min-width: 375px) {
 
@@ -89,95 +112,12 @@
 
     .btn {
         font-family: 'Poppins', sans-serif;
-        padding: 1rem 4rem;
-        font-size: 1.5rem;
+        padding: .5rem 1.5rem;
+        font-size: 1rem;
         font-weight: 500;
         cursor: pointer;
         text-decoration: none;
-    }
-
-    .btn-outline-primary {
-        background-color: transparent;
-        color: rgb(72, 129, 235);
-        border-color: rgb(72, 129, 235);
-        border-style: solid;
-        border-width: 4px;
-        border-radius: 12px;
-        transition: all 0.2s linear;
-    }
-
-    .btn-outline-primary:hover {
-        color: white;
-        background:rgb(72, 129, 235);
-        border-color: white;
-        transition: all 0.2s linear;
-    }
-    
-/*     .circle-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .half-circle {
-        background-color: cornflowerblue;
-        height: 60vh;
-        width: 100%;
-        border-radius: 50% 0 0 50%;
-    } */
-}
-
-@media only screen and (min-width: 768px) {
-/*     .navbar li {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .half-side {
-        width: 100%;
-        display: flex;
-    }
-
-    .float-left{
-        margin-bottom: 20px;
-    }
-
-    .float-right {
-        margin-top: 20px;
-    } */
-
-   /*  .center {
-        margin: 0 auto;
-        padding: 25% 0;
-    } */
-
-/*     .title {
-        margin: 10px 0;
-        text-align: center;
-        font-size: 3.5rem;
-        letter-spacing: 2px;
-    }
-
-    .link {
-        font-size: 1.6rem;
-    }
-
-    .title {
-        font-size: 5rem;
-    }
-
-    .description{
-        font-size: 1.5rem;
-    } */
-
-/*     .btn {
-        font-family: 'Poppins', sans-serif;
-        padding: 1rem 4rem;
-        font-size: 1.5rem;
-        font-weight: 500;
-        cursor: pointer;
+        text-transform: uppercase;
     }
 
     .btn-outline-primary {
@@ -186,7 +126,7 @@
         border-color: rgb(72, 129, 235);
         border-style: solid;
         border-width: 2px;
-        border-radius: 12px;
+        border-radius: 6px;
         transition: all 0.2s linear;
     }
 
@@ -195,17 +135,70 @@
         background:rgb(72, 129, 235);
         border-color: white;
         transition: all 0.2s linear;
-    } */
+    }
 
-    /* .half-circle {
-        background-color: cornflowerblue;
-        height: 80vh;
-        width: 100%;
-        border-radius: 50% 0 0 50%;
-    } */
+    /* SERVICES */
+
+    .services-list {
+        font-size: 1.5rem;
+        font-weight: 200;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        list-style: none;
+    }
+
+    .service-item::before{
+        content:"\1F539";
+    }
+
+    .box-content{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .box-item {
+        text-align: center;
+    }
+
+    .box-item svg {
+        color: cornflowerblue;
+    }
+
+    .box-item h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For tablets: */
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+
+    
 }
 
 @media only screen and (min-width: 1024px) {
+
+    .services {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
 
     .link {
         font-size: 1rem;
@@ -230,58 +223,20 @@
         float: right
     }
 
-/*     .center {
-        margin: 0 auto;
-        padding: 25% 0;
-    } */
-
-    /* .title {
-        margin: 10px auto;
-        margin-right: 20px;
-        font-size: 3.5rem;
-        letter-spacing: 2px;
-    }
-
-    
-    .btn {
-        font-family: 'Poppins', sans-serif;
-        padding: 0.7rem 2rem;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-    }
-
-    .btn-outline-primary {
-        background-color: transparent;
-        color: rgb(72, 129, 235);
-        border-color: rgb(72, 129, 235);
-        border-style: solid;
-        border-width: 2px;
-        border-radius: 12px;
-        transition: all 0.2s linear;
-    }
-
-    .btn-outline-primary:hover {
-        color: white;
-        background:rgb(72, 129, 235);
-        border-color: white;
-        transition: all 0.2s linear;
-    }
-
-    
-    .half-circle {
-        background-color: cornflowerblue;
-        height: 90vh;
-        width: 100%;
-        border-radius: 50% 0 0 50%;
-    }
-
-    .half-circle img {
-        width: 80%;
-        filter: drop-shadow(8px 8px 4px rgb(37, 71, 133));
-    } */
+    /* For desktop: */
+    .col-lg-1 {width: 8.33%;}
+    .col-lg-2 {width: 16.66%;}
+    .col-lg-3 {width: 25%;}
+    .col-lg-4 {width: 33.33%;}
+    .col-lg-5 {width: 41.66%;}
+    .col-lg-6 {width: 50%;}
+    .col-lg-7 {width: 58.33%;}
+    .col-lg-8 {width: 66.66%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {width: 100%;}
 }
-
     /* MARGINS */
 
     .mt-1 {
@@ -409,6 +364,10 @@ header {
     height: 90vh;
 }
 
+.vh-70 {
+    height: 70vh;
+}
+
 .home {
     height: 100vh;
     /* font-family: 'Lobster', cursive; */
@@ -457,3 +416,6 @@ header {
 .bg-light {
     background-color: antiquewhite;
 }
+
+/* SERVICES */
+
