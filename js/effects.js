@@ -1,8 +1,18 @@
 $(document).ready(function() {
- const tags = $(".tag");
-    const homeTag = tags[0];
-    $(homeTag).addClass("visible");
+  const tags = $(".tag");
+  const homeTag = tags[0];
+  $(homeTag).addClass("visible");
+
+  let currentYear = new Date().getFullYear();
+  $("#year").html(currentYear);
+
+  $(".link").click("on", function(){
+    $(".link").removeClass("active");
+    $(this).addClass("active");
+  });
+
 });
+
 
 
 $(document).on("scroll", function() {

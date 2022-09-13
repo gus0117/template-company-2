@@ -262,6 +262,16 @@ transform: translate(0, 0);
     .inline-block {
         display: inline-block;
     }
+
+    .dev-info {
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .d-block {
+        display: block;
+    }
+    
 }
 
 @media only screen and (min-width: 600px) {
