@@ -28,5 +28,14 @@ $(document).on("scroll", function() {
       } else {
         $(tag).removeClass("visible");
       }
-    }
+    } 
+
+    /* const sections = $(section);
+    
+    for (let i = 0; i < sections.length; i++){
+      let section = sections[i];
+      if($(section).position().top < pageBottom){
+        $()
+      } 
+    } */
   });
